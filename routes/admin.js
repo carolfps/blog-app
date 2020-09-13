@@ -10,8 +10,12 @@ router.get('/posts', (req, res) => {
     res.send('Blog')
 })
 
-router.get('/categories', (req,res)=>{
-    res.send('Categories')
+router.get('/categories', (req,res) => {
+    res.render('admin/categories')
 })
 
- module.exports = router;
+router.get('/categories/add', (req,res) => {
+    res.render('admin/addcategories')
+})
+
+module.exports = router;
