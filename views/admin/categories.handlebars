@@ -1,5 +1,15 @@
 <h2>List of categories:</h2>
 <hr>
+{{#each categories}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4>{{name}}</h4> 
+            <small>{{slug}}</small>
+        </div>
+    </div>
+{{else}}
+    <p class="font-italic">No categories.</p>
+{{/each}}
 <a href="/admin/categories/add">
-    <button class="btn btn-success">New category</button>
+    <button class="btn btn-success my-4">New category</button>
 </a>
